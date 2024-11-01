@@ -12,13 +12,18 @@
             text-align: center;
         }
         h1 {
-            margin-bottom: 15px; 
+            margin-top: 90px;
+            margin-bottom: 10px; 
         }
         .maze {
             display: grid;
             grid-template-columns: repeat(5, 50px);
             gap: 5px; 
             justify-content: center; 
+        }
+        .rules {
+            margin-bottom: 20px;
+            font-size: 18px;
         }
         .cell {
             width: 50px;
@@ -42,7 +47,11 @@
     </style>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>eye.tracking</h1>
+    <div class="rules">
+        <p>begin at the door and make your way to the flag. <br/>
+            avoid ghosts. have fun eye tracking.</p>
+    </div>
     <div class="maze">
         {% for row in maze %}
             {% for cell in row %}
@@ -56,6 +65,7 @@
             {% endfor %}
         {% endfor %}
     </div>
+    <div id="message" class="game-over"></div>
     <script>
         function flipTile(cell) {
             if (cell.innerHTML.trim() === '') {
