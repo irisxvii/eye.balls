@@ -6,7 +6,7 @@
 ## Basic Details
 
 ### Team Members
-- Team Lead: Iris Mariah Kurien - [LBSITW]
+- Team Lead: Iris Mariah Kurien - LBSITW
   
 ### Project Description
 [2-3 lines about what your project does]
@@ -20,6 +20,7 @@ lets make it over complicated and extra
 ## Technical Details
 ### Technologies Used
 - python
+- flask
 - opencv
 - mediapipe
 - pyautogui
