@@ -33,7 +33,9 @@ while True:
         for landmark in left_eye_landmarks:
             x = int(landmark.x * frame_w)
             y = int(landmark.y * frame_h)
-            cv2.circle(frame, (x, y), 3, (0, 255, 255))               
+            cv2.circle(frame, (x, y), 3, (0, 255, 255))       
+        if(left_eye_landmarks[0].y- left_eye_landmarks[1].y)<0.01:
+            print("click")   
 
     cv2.imshow('Face Mesh', frame)
 
