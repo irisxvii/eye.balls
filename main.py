@@ -35,7 +35,8 @@ while True:
             y = int(landmark.y * frame_h)
             cv2.circle(frame, (x, y), 3, (0, 255, 255))       
         if(left_eye_landmarks[0].y- left_eye_landmarks[1].y)<0.01:
-            print("click")   
+            pyautogui.click()
+            pyautogui.sleep(1) 
 
     cv2.imshow('Face Mesh', frame)
 
