@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>maze</title>
+    <title>5x5 Maze</title>
     <style>
+        body {
+            background-color: #1e1e1e; 
+            color: #ffffff; 
+            font-family: Arial, sans-serif; 
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px; 
+        }
         .maze {
             display: grid;
             grid-template-columns: repeat(5, 50px);
             gap: 5px; 
+            justify-content: center; 
         }
         .cell {
             width: 50px;
@@ -16,13 +26,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #ccc;
-            font-size: 24px; 
+            border: 1px solid #444; 
+            background-color: #2a2a2a;
+            font-size: 24px;
+            border-radius: 4px; 
+        }
+        .cell:hover {
+            background-color: #3a3a3a;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1>welcome</h1>
     <div class="maze">
         {% for row in maze %}
             {% for cell in row %}
