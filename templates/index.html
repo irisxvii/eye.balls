@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5x5 Maze</title>
+    <title>maze</title>
     <style>
         body {
             background-color: #1e1e1e; 
@@ -34,14 +34,24 @@
         .cell:hover {
             background-color: #3a3a3a;
         }
+        img{
+            max-width: 80%;
+            max-height: 80%;
+        }
     </style>
 </head>
 <body>
-    <h1>welcome</h1>
+    <h1>Welcome</h1>
     <div class="maze">
         {% for row in maze %}
             {% for cell in row %}
-                <div class="cell">{{ cell }}</div>
+                <div class="cell">
+                    {% if cell.startswith('static/') %}
+                        <img src="{{ cell }}" alt="Maze Element">
+                    {% else %}
+                        {{ cell }}
+                    {% endif %}
+                </div>
             {% endfor %}
         {% endfor %}
     </div>
