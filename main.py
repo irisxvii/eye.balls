@@ -29,6 +29,11 @@ while True:
                     screen_x = screen_w / frame_w * x
                     screen_y = screen_h / frame_h * y
                     pyautogui.moveTo(screen_x,screen_y)
+        left_eye_landmarks = [face_landmarks.landmark[145], face_landmarks.landmark[159]]
+        for landmark in left_eye_landmarks:
+            x = int(landmark.x * frame_w)
+            y = int(landmark.y * frame_h)
+            cv2.circle(frame, (x, y), 3, (0, 255, 255))               
 
     cv2.imshow('Face Mesh', frame)
 
