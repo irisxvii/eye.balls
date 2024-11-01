@@ -30,6 +30,7 @@
             background-color: #2a2a2a;
             font-size: 24px;
             border-radius: 4px; 
+            cursor: pointer;
         }
         .cell:hover {
             background-color: #3a3a3a;
@@ -45,7 +46,7 @@
     <div class="maze">
         {% for row in maze %}
             {% for cell in row %}
-                <div class="cell">
+                <div class="cell" onclick="flipTile(this)">
                     {% if cell.startswith('static/') %}
                         <img src="{{ cell }}" alt="Maze Element">
                     {% else %}
@@ -55,5 +56,12 @@
             {% endfor %}
         {% endfor %}
     </div>
+    <script>
+        function flipTile(cell) {
+            if (cell.innerHTML.trim() === '') {
+                cell.innerHTML = '⭐'; 
+            }
+        }
+    </script>
 </body>
 </html>

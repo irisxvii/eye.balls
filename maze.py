@@ -9,12 +9,12 @@ def index():
      maze[0][0] = 'static/door.png'
      maze[4][4] = 'static/flag.png'
 
-     skulls_to_place = 5  
+     skulls_to_place = 7
      while skulls_to_place > 0:
         row = random.randint(0, 4)
         col = random.randint(0, 4)
         if maze[row][col] == ' ':  
-            maze[row][col] = 'static/banana.png'
+            maze[row][col] = 'static/bhooth.png'
             skulls_to_place -= 1
      return render_template('index.html', maze=maze)
 
