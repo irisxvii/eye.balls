@@ -36,13 +36,14 @@
             font-size: 24px;
             border-radius: 4px; 
             cursor: pointer;
+            position: relative;
         }
-        .cell:hover {
-            background-color: #3a3a3a;
-        }
-        img{
+        .cell img {
             max-width: 80%;
             max-height: 80%;
+        }
+        .hidden-ghost {
+            opacity: 0;
         }
     </style>
 </head>
@@ -55,9 +56,10 @@
     <div class="maze">
         {% for row in maze %}
             {% for cell in row %}
-                <div class="cell" onclick="flipTile(this)">
+                <div class="cell" onclick="flipTile(this)" data-type="{{ 'ghost' if cell == 'static/bhooth.png' else '' }}">
                     {% if cell.startswith('static/') %}
-                        <img src="{{ cell }}" alt="Maze Element">
+                        <img src="{{ cell }}" alt="Maze Element" 
+                             class="{{ 'ghost' if cell == 'static/bhooth.png' else '' }}">
                     {% else %}
                         {{ cell }}
                     {% endif %}
@@ -67,10 +69,33 @@
     </div>
     <div id="message" class="game-over"></div>
     <script>
+        let gameStarted = false;
+
         function flipTile(cell) {
-            if (cell.innerHTML.trim() === '') {
+            if (!gameStarted && cell.querySelector('img') && cell.querySelector('img').src.includes('door.png')) {
+                startGame();
+            } else if (gameStarted && cell.dataset.type === 'ghost') {
+                endGame("Oh no! You hit a ghost!");
+            } else if (cell.innerHTML.trim() === '') {
                 cell.innerHTML = '⭐'; 
             }
+        }
+
+        function startGame() {
+            gameStarted = true;
+            document.querySelectorAll('.ghost').forEach(ghost => {
+                ghost.classList.add('hidden-ghost');
+            });
+            displayMessage("The game has started! Avoid the hidden ghosts!");
+        }
+
+        function endGame(message) {
+            displayMessage(message);
+            gameStarted = false;
+        }
+
+        function displayMessage(msg) {
+            document.getElementById("message").innerText = msg;
         }
     </script>
 </body>
