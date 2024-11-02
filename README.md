@@ -1,4 +1,8 @@
-![playing](https://github.com/user-attachments/assets/95a4ad7b-3d00-418f-b7f8-8db0a3a15186)![Screenshot 2024-11-02 193718](https://github.com/user-attachments/assets/a8416120-d447-440d-bd1d-9f94666220a0)<img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
+
+https://github.com/user-attachments/assets/56df3298-65a7-4475-8ba6-84ce9226bd7f
+
+https://github.com/user-attachments/assets/3e68e4a0-1e93-4286-8d03-9111646b165f
+<img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
 # EYERIS 🎯
 
@@ -47,7 +51,8 @@ pip install pyautogui
 *while playong*
 
 ### Project Demo
-[https://github.com/user-attachments/assets/ede4564f-4542-4cfb-bfcb-9a01e8926896]
+
+![me and my friend](https://github.com/user-attachments/assets/c63eb89d-07ec-4b9f-8fb4-74945d204bbf)
 *video shows me and my friend trying my project out*
 
 ---
