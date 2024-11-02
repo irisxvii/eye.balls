@@ -10,6 +10,9 @@
             color: #ffffff; 
             font-family: 'Courier New', Courier, monospace; 
             text-align: center;
+            overflow: hidden;
+            margin: 0;
+            position: relative;
         }
         h1 {
             margin-top: 90px;
@@ -20,6 +23,8 @@
             grid-template-columns: repeat(7, 50px);
             gap: 5px; 
             justify-content: center; 
+            position: relative;
+            z-index: 1;
         }
         .rules {
             margin-bottom: 20px;
@@ -49,6 +54,8 @@
             margin-top: 20px;
             font-size: 20px;
             color: #ff4444;
+            position: relative;
+            z-index: 2;
         }
         .star {
             animation: pulse 0.8s ease infinite;
@@ -66,9 +73,39 @@
             50% { transform: translate(2px, 2px); }
             75% { transform: translate(-2px, 2px); }
         }
+        .full-screen-ghost {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 100px;
+            height: 100px;
+            z-index: 1000;
+            transition: transform 0.5s ease-in;
+        }
+        .full-screen-ghost.expanded {
+            transform: translate(-50%, -50%) scale(30);
+            top: 90%;
+            right: 50%;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 1.5s ease-in;
+            pointer-events: none;
+            z-index: 999;
+        }
+        .overlay.active {
+            background: rgba(0, 0, 0, 0.8);
+        }
     </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <h1>eye.tracking</h1>
     <div class="rules">
         <p>click on the door to start the game <br/>
@@ -98,17 +135,30 @@
                 startGame();
             } else if (gameStarted) {
                 if (cell.dataset.type === 'ghost') {
-                    cell.querySelector('img').classList.add('ghost'); 
+                    const ghostImg = cell.querySelector('img');
+                    ghostImg.classList.remove('hidden-ghost');
+                    ghostImg.classList.add('ghost');
+                    
+                    const fullScreenGhost = document.createElement('img');
+                    fullScreenGhost.src = ghostImg.src;
+                    fullScreenGhost.classList.add('full-screen-ghost');
+                    document.body.appendChild(fullScreenGhost);
+                    
+                    document.querySelector('.overlay').classList.add('active');
+                    
+                    setTimeout(() => {
+                        fullScreenGhost.classList.add('expanded');
+                    }, 50);
+
                     endGame("Oh no! You hit a ghost! Game Over!");
                 } else if (cell.querySelector('img') && cell.querySelector('img').src.includes('flag.png')) {
                     endGame("Congratulations! You reached the flag!");
                 } else if (cell.innerHTML.trim() === '') {
                     cell.innerHTML = '⭐';
-                    cell.classList.add('star'); 
+                    cell.classList.add('star');
                 }
             }
         }
-
         function startGame() {
             gameStarted = true;
             document.querySelectorAll('.ghost').forEach(ghost => {
