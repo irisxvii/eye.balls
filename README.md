@@ -47,8 +47,7 @@ pip install pyautogui
 *while playong*
 
 ### Project Demo
-
-![me and aishu playing](https://github.com/user-attachments/assets/368d2eda-ae8a-4483-b990-9775354bb83e)
+[https://github.com/user-attachments/assets/368d2eda-ae8a-4483-b990-9775354bb83e]
 *video shows me and my friend trying my project out*
 
 ---
