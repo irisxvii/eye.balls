@@ -17,7 +17,7 @@
         }
         .maze {
             display: grid;
-            grid-template-columns: repeat(5, 50px);
+            grid-template-columns: repeat(7, 50px);
             gap: 5px; 
             justify-content: center; 
         }
@@ -49,6 +49,22 @@
             margin-top: 20px;
             font-size: 20px;
             color: #ff4444;
+        }
+        .star {
+            animation: pulse 0.8s ease infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .ghost {
+            animation: shake 1.9s ease infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-2px, -2px); }
+            50% { transform: translate(2px, 2px); }
+            75% { transform: translate(-2px, 2px); }
         }
     </style>
 </head>
@@ -82,11 +98,13 @@
                 startGame();
             } else if (gameStarted) {
                 if (cell.dataset.type === 'ghost') {
+                    cell.querySelector('img').classList.add('ghost'); 
                     endGame("Oh no! You hit a ghost! Game Over!");
                 } else if (cell.querySelector('img') && cell.querySelector('img').src.includes('flag.png')) {
                     endGame("Congratulations! You reached the flag!");
                 } else if (cell.innerHTML.trim() === '') {
-                    cell.innerHTML = '⭐'; 
+                    cell.innerHTML = '⭐';
+                    cell.classList.add('star'); 
                 }
             }
         }
