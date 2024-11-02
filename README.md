@@ -1,15 +1,16 @@
-<img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
+![playing](https://github.com/user-attachments/assets/95a4ad7b-3d00-418f-b7f8-8db0a3a15186)![Screenshot 2024-11-02 193718](https://github.com/user-attachments/assets/a8416120-d447-440d-bd1d-9f94666220a0)<img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
 # EYERIS 🎯
-
 
 ## Basic Details
 
 ### Team Members
-- Team Lead: Iris Mariah Kurien - LBSITW
+Iris Mariah Kurien - LBSITW
   
 ### Project Description
-[2-3 lines about what your project does]
+its just a fun maze game where you have to reach the finishing point without bumping into the obsctacles.<br/>
+you get a quick look at the obstacles before they vanish, and then its all on you to remember the path<br/> 
+No keyboards, no mouse, just pure eye-tracking to reach the flag.
 
 ### The Problem (that doesn't exist)
 why let everyone win a maze game easily? 
@@ -26,38 +27,28 @@ lets make it over complicated and extra
 - pyautogui
 - threading
 
-### Implementation
-For Software:
 # Installation
-[commands]
-
-# Run
-[commands]
+```
+pip install flask
+pip install opencv
+pip install mediapipe
+pip install pyautogui
+```
 
 ### Project Documentation
-For Software:
+# Screenshots
+![before starting](https://github.com/user-attachments/assets/9da9401b-1cfe-47a1-b497-5cc1474ff9a3)
+*you can see the ghosts before starting the game*
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![while playing](https://github.com/user-attachments/assets/f18f5888-1a39-41e1-813c-6a08a7eac99a)
+*after you start the game, ghosts become invisible*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+![playing](https://github.com/user-attachments/assets/3db48a2f-886c-4b84-87e0-1dfaa5a23b4f)
+*while playong*
 
 ### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
+[https://github.com/user-attachments/assets/ede4564f-4542-4cfb-bfcb-9a01e8926896]
+*video shows me and my friend trying my project out*
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
