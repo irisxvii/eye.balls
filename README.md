@@ -37,17 +37,17 @@ pip install pyautogui
 
 ### Project Documentation
 # Screenshots
-![before starting](https://github.com/user-attachments/assets/9da9401b-1cfe-47a1-b497-5cc1474ff9a3)
+![before starting](https://github.com/user-attachments/assets/9da9401b-1cfe-47a1-b497-5cc1474ff9a3) <br/>
 *you can see the ghosts before starting the game*
 
-![while playing](https://github.com/user-attachments/assets/f18f5888-1a39-41e1-813c-6a08a7eac99a)
+![while playing](https://github.com/user-attachments/assets/f18f5888-1a39-41e1-813c-6a08a7eac99a)<br/>
 *after you start the game, ghosts become invisible*
 
-![playing](https://github.com/user-attachments/assets/3db48a2f-886c-4b84-87e0-1dfaa5a23b4f)
+![playing](https://github.com/user-attachments/assets/3db48a2f-886c-4b84-87e0-1dfaa5a23b4f)<br/>
 *while playong*
 
 ### Project Demo
-[https://github.com/user-attachments/assets/368d2eda-ae8a-4483-b990-9775354bb83e]
+![me and aishu playing](https://github.com/user-attachments/assets/368d2eda-ae8a-4483-b990-9775354bb83e)<br/>
 *video shows me and my friend trying my project out*
 
 ---
