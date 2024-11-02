@@ -1,7 +1,3 @@
-
-https://github.com/user-attachments/assets/56df3298-65a7-4475-8ba6-84ce9226bd7f
-
-https://github.com/user-attachments/assets/3e68e4a0-1e93-4286-8d03-9111646b165f
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
 # EYERIS 🎯
