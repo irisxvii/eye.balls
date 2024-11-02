@@ -45,13 +45,19 @@
         .hidden-ghost {
             opacity: 0;
         }
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff4444;
+        }
     </style>
 </head>
 <body>
     <h1>eye.tracking</h1>
     <div class="rules">
-        <p>begin at the door and make your way to the flag. <br/>
-            avoid ghosts. have fun eye tracking.</p>
+        <p>click on the door to start the game <br/>
+             and make your way to the flag. 
+            avoid ghosts. <br/>have fun eye tracking.</p>
     </div>
     <div class="maze">
         {% for row in maze %}
@@ -74,17 +80,21 @@
         function flipTile(cell) {
             if (!gameStarted && cell.querySelector('img') && cell.querySelector('img').src.includes('door.png')) {
                 startGame();
-            } else if (gameStarted && cell.dataset.type === 'ghost') {
-                endGame("Oh no! You hit a ghost!");
-            } else if (cell.innerHTML.trim() === '') {
-                cell.innerHTML = '⭐'; 
+            } else if (gameStarted) {
+                if (cell.dataset.type === 'ghost') {
+                    endGame("Oh no! You hit a ghost! Game Over!");
+                } else if (cell.querySelector('img') && cell.querySelector('img').src.includes('flag.png')) {
+                    endGame("Congratulations! You reached the flag!");
+                } else if (cell.innerHTML.trim() === '') {
+                    cell.innerHTML = '⭐'; 
+                }
             }
         }
 
         function startGame() {
             gameStarted = true;
             document.querySelectorAll('.ghost').forEach(ghost => {
-                ghost.classList.add('hidden-ghost');
+                ghost.classList.add('hidden-ghost'); 
             });
             displayMessage("The game has started! Avoid the hidden ghosts!");
         }
@@ -92,10 +102,17 @@
         function endGame(message) {
             displayMessage(message);
             gameStarted = false;
+            setTimeout(resetGame, 3000); 
+        }
+
+        function resetGame() {
+            location.reload();  
         }
 
         function displayMessage(msg) {
-            document.getElementById("message").innerText = msg;
+            const messageDiv = document.getElementById("message");
+            messageDiv.innerText = msg;
+            messageDiv.style.color = msg.includes("Congratulations") ? "#44ff44" : "#ff4444"; 
         }
     </script>
 </body>
