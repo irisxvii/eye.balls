@@ -48,7 +48,7 @@ pip install pyautogui
 
 ### Project Demo
 
-![me and my friend](https://github.com/user-attachments/assets/c63eb89d-07ec-4b9f-8fb4-74945d204bbf)
+![me and aishu playing](https://github.com/user-attachments/assets/368d2eda-ae8a-4483-b990-9775354bb83e)
 *video shows me and my friend trying my project out*
 
 ---
