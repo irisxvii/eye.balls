@@ -10,7 +10,8 @@ Iris Mariah Kurien - LBSITW
 ### Project Description
 its just a fun maze game where you have to reach the finishing point without bumping into the obsctacles.<br/>
 you get a quick look at the obstacles before they vanish, and then its all on you to remember the path<br/> 
-No keyboards, no mouse, just pure eye-tracking to reach the flag.
+No keyboards, no mouse, just pure *eye-tracking* to reach the flag.
+*(go watch the video in the end. its funny.)*
 
 ### The Problem (that doesn't exist)
 why let everyone win a maze game easily? 
@@ -37,14 +38,14 @@ pip install pyautogui
 
 ### Project Documentation
 # Screenshots
-![before starting](https://github.com/user-attachments/assets/9da9401b-1cfe-47a1-b497-5cc1474ff9a3) <br/>
+![playing](https://github.com/user-attachments/assets/3db48a2f-886c-4b84-87e0-1dfaa5a23b4f)<br/>
+*while playing*
+
+![initially](https://github.com/user-attachments/assets/b0c01034-592b-4725-9d0c-62e983c7dc97) <br/>
 *you can see the ghosts before starting the game*
 
-![while playing](https://github.com/user-attachments/assets/f18f5888-1a39-41e1-813c-6a08a7eac99a)<br/>
+![playing (2)](https://github.com/user-attachments/assets/f7026231-d0c0-4186-9f30-b0918f1feaf4)<br/>
 *after you start the game, ghosts become invisible*
-
-![playing](https://github.com/user-attachments/assets/3db48a2f-886c-4b84-87e0-1dfaa5a23b4f)<br/>
-*while playong*
 
 ### Project Demo
 ![me and aishu playing](https://github.com/user-attachments/assets/368d2eda-ae8a-4483-b990-9775354bb83e)<br/>
