@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/user/018eed1d-6093-4f51-9fca-7863b7a1ac97/project/2397896e-4f20-4ee2-a2ec-d9cc894dad33.svg)](https://wakatime.com/badge/user/018eed1d-6093-4f51-9fca-7863b7a1ac97/project/2397896e-4f20-4ee2-a2ec-d9cc894dad33)<br />
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
 # EYERIS 🎯
