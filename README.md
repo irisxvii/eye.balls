@@ -1,3 +1,7 @@
+*i couldnt get the eye tracking part to work when i deployed my project. <br/>
+the video demo is linked to the end of this repo. the url ive submitted has only the maze part which is pretty boring by itself.* <br/>
+(for the useless judges 👆😭😭)
+
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
 # EYERIS 🎯
